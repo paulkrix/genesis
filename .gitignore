@@ -28,9 +28,13 @@
 # ignore the vendor folder
 /site/vendor
 
+# ignore the plugins folder
+/site/app/plugins
+
 # ignore all files starting with . or ~
 .*
 ~*
+.DS_Store
 
 # ignore node dependency directories (used by grunt)
 node_modules/
@@ -52,7 +56,8 @@ Thumbs.db
 !composer.json
 !index.php
 !app/themes/genesis/index.php
-!/site/app
+!/site/app/themes
+
 
 # track favicon files, if they exist
 !android-chrome-*.png
