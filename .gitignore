@@ -22,26 +22,11 @@
 #   this version ignores all files by default
 # -----------------------------------------------------------------
 
-# ignore vendor
-/vendor
+# ignore the wp folder
+/site/wp
 
-
-# ignore everything in the root except the "wp-content" directory.
-/wp
-!wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# mu-plugins, plugins, and themes directories
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
-
-# ignore all mu-plugins, plugins, and themes
-# unless explicitly whitelisted at the end of this file
-# wp-content/mu-plugins/*
-# wp-content/plugins/*
-# wp-content/themes/*
+# ignore the vendor folder
+/site/vendor
 
 # ignore all files starting with . or ~
 .*
@@ -54,36 +39,8 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
-# ignore Editor files
-*.sublime-project
-*.sublime-workspace
-*.komodoproject
-
-# ignore log files and databases
-# *.log
-# *.sql
-# *.sqlite
-
-# ignore compiled files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# ignore packaged files
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
 # -------------------------
-# BEGIN Whitelisted Files
+# Whitelisted files
 # -------------------------
 
 # track these files, if they exist
@@ -95,6 +52,7 @@ Thumbs.db
 !composer.json
 !index.php
 !app/themes/genesis/index.php
+!/site/app
 
 # track favicon files, if they exist
 !android-chrome-*.png

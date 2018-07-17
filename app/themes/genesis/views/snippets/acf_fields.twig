@@ -1,3 +1,0 @@
-{% for key, field in acf %}
-  {% include 'acf_fields/' ~ key ~ '.twig' ignore missing with { 'field' : post.get_field( field.name ) } %}
-{% endfor %}
