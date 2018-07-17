@@ -1,0 +1,83 @@
+//  Variables for genesis theme
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Global
+//   2. Breakpoints
+//   3. Colours
+
+
+// 1. Global
+// ---------
+$global-font-size: 100%;
+$global-lineheight: 1.3;
+
+// 2. Breakpoints
+// ---------
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+// 3. Colours
+// ---------
+
+
+$black: #000000;
+$white: #ffffff;
+
+$blue: #414263;
+
+$lightblue: #296EB6;
+
+$pink: #E89585;
+
+$burgundy: #420100;
+
+$maroon: #70194A;
+
+$green: #91AB9C;
+
+
+$colour-palette: (
+  white: (
+    background: $white,
+    font: $black,
+    accent: $maroon
+  ),
+  black: (
+    background: $black,
+    font: $white,
+    accent: $pink
+  ),
+  blue: (
+    background: $blue,
+    font: $white,
+    accent: $pink
+  ),
+  lightblue: (
+    background: $lightblue,
+    font: $black,
+    accent: $green
+  ),
+  pink: (
+    background: $pink,
+    font: $black,
+    accent: $blue
+  ),
+  burgundy: (
+    background: $burgundy,
+    font: $white,
+    accent: $green
+  ),
+  maroon: (
+    background: $maroon,
+    font: $white,
+    accent: $pink
+  )
+);

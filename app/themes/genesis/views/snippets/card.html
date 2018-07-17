@@ -1,0 +1,11 @@
+<li class="col-xs-12 co-sm-6 col-md-4">
+  <a href="{{ card.link }}" class="card">
+    <div class="wrapper-title">
+      <h3>{{ card.title|truncate_to_word( 40, '&hellip;' ) }}</h3>
+    </div>
+    <div class="content">
+      <p>{{ card.excerpt|truncate_to_word( 82, '&hellip;' ) }}</p>
+      <span class="btn btn-primary">Read more</span>
+    </div>
+  </a>
+</li>

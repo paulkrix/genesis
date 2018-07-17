@@ -1,0 +1,14 @@
+{% if menu %}
+  {% if menu is not empty and menu[0].level == 0 %}
+    <ul class="nav navbar-nav navbar-left">
+      {% else %}
+    <ul>
+  {% endif %}
+  {% for item in menu %}
+    <li class="{{ item.classes | join(' ') }}">
+      <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+      {% include "menu.twig" with {'menu': item.get_children} %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
