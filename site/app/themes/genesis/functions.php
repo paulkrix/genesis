@@ -86,18 +86,16 @@ class GenesisSite extends TimberSite {
 
 	public function enqueue_scripts() {
 		//Enqueue all scripts
-		wp_register_script('owl.carousel', get_template_directory_uri() . '/assets/node_modules/owl.carousel/dist/owl.carousel.min.js', array(),'2.3.4', true);
-		wp_register_script('carbonate', get_template_directory_uri() . '/assets/dist/js/script.js', array('jquery', 'owl.carousel'),'1.0', true);
-		wp_enqueue_script('owl.carousel');
-		wp_enqueue_script('carbonate');
+		wp_register_script('genesis', get_template_directory_uri() . '/assets/dist/js/script.js', array('jquery'),'1.0', true);
+		wp_enqueue_script('genesis');
 
 		//Enqueue fonts as styles
 		wp_register_style('open-sans-font', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800');
 		wp_enqueue_style('open-sans-font');
 
 		//Enqueue stylesheets
-		wp_register_style('carbonate', get_template_directory_uri() . '/assets/dist/css/style.css');
-		wp_enqueue_style('carbonate');
+		wp_register_style('genesis', get_template_directory_uri() . '/assets/dist/css/style.css');
+		wp_enqueue_style('genesis');
 
 		$this->_enqueue_page_specific_scripts();
 	}

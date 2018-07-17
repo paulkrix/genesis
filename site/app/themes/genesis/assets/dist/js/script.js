@@ -1,1 +1,0 @@
-var ModuleName=(jQuery,{publicMethod:function(){}});
