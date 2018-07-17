@@ -3,8 +3,9 @@
 namespace Sample;
 
 //Load .env environment variables
-require_once(__DIR__ . '/../../../../vendor/autoload.php');
-(new \Dotenv\Dotenv(__DIR__.'/../../../../'))->load();
+require_once( __DIR__ . '/../../../../vendor/autoload.php');
+$dotenv = new \Dotenv\Dotenv(__DIR__.'/../../../../');
+$dotenv->load();
 
 class ApiProxy
 {
@@ -22,14 +23,14 @@ class ApiProxy
     public function querySample()
     {
         // Construct the web service query
-        $webseviceQuery = 'sample?key='.$this->apiKey.'&size='.$this->recordsPerBatch;
+        $webseviceQuery = 'posts?key='.$this->apiKey.'&size='.$this->recordsPerBatch;
         return $this->queryWebservice($webseviceQuery);
     }
 
     public function queryProductsNextBatch($batchNumber)
     {
         // Construct the web service query
-        $webseviceQuery = 'sample?key='.$this->apiKey.'&size='.$this->recordsPerBatch;
+        $webseviceQuery = 'posts?key='.$this->apiKey.'&size='.$this->recordsPerBatch;
         $webseviceQuery .= '&page='.$batchNumber;
 
         return $this->queryWebservice($webseviceQuery);
@@ -37,7 +38,7 @@ class ApiProxy
 
     public function getSingle($sampleId)
     {
-        $webseviceQuery = 'sample?key='.$this->apiKey.'&sampleId='.$sampleId;
+        $webseviceQuery = 'posts/' . $sampleId . '?key='.$this->apiKey;
         return $this->queryWebservice($webseviceQuery);
     }
 
@@ -49,7 +50,7 @@ class ApiProxy
         if ($result === false) {
             return false;
         }
-        return json_decode($json, true);
+        return json_decode($result, true);
     }
 
     public function getRecordsPerBatch()
